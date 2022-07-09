@@ -1,0 +1,7 @@
+version: '3.4'
+
+services:
+  api:
+    environment:
+      - "ASPNETCORE_ENVIRONMENT=Development"
+      - "SQLSERVER_CONNECTION_STRING=Server=mssql;Initial Catalog=Blog;User ID=sa;Password=MyPass@word;Connection Timeout=30;"

@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  mssql:
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    cap_add: [ 'SYS_PTRACE' ]
+    environment:
+      - "ACCEPT_EULA=1"
+      - "MSSQL_SA_PASSWORD=MyPass@word"
+    ports:
+      - "1433:1433"
+    hostname: mssql
+    volumes:
+      - "mssql-azuresql-edge-data:/var/opt/mssql"
+  api:
+    depends_on:
+      - "mssql"
+    environment:
+      - "ASPNETCORE_ENVIRONMENT=Production"
+      - "SQLSERVER_CONNECTION_STRING=Server=mssql;Initial Catalog=Blog;User ID=sa;Password=MyPass@word;Connection Timeout=30;"
+    ports:
+      - "5000:80"
+    build:
+      context: .
+      dockerfile: src/Api/Dockerfile
+volumes:
+  mssql-azuresql-edge-data:
