@@ -7,7 +7,7 @@ using Repository.Contexts;
 
 #endregion
 
-namespace Ioc.Dependencies
+namespace Api.Dependencies
 {
     public static class SqlServer
     {

@@ -6,7 +6,7 @@ using Model.ViewModels;
 
 #endregion
 
-namespace Ioc.MapperProfiles
+namespace Api.MapperProfiles
 {
     public class EntitiesProfiles : Profile
     {

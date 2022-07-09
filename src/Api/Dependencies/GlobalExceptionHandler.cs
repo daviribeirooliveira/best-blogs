@@ -1,12 +1,12 @@
 ﻿#region
 
-using Ioc.Middlewares;
+using Api.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
 #endregion
 
-namespace Ioc.Dependencies
+namespace Api.Dependencies
 {
     public static class GlobalExceptionHandler
     {

@@ -7,10 +7,8 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["src/Api/Api.csproj", "src/Api/"]
-COPY ["src/Service/Service.csproj", "src/Service/"]
 COPY ["src/Model/Model.csproj", "src/Model/"]
 COPY ["src/Repository/Repository.csproj", "src/Repository/"]
-COPY ["src/Ioc/Ioc.csproj", "src/Ioc/"]
 RUN dotnet restore "src/Api/Api.csproj"
 COPY . .
 WORKDIR "/src/src/Api"

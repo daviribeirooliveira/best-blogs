@@ -1,7 +1,6 @@
 #region
 
-using Ioc;
-using Ioc.Dependencies;
+using Api.Dependencies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;

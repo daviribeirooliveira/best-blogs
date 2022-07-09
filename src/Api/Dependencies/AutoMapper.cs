@@ -1,12 +1,12 @@
 #region
 
+using Api.MapperProfiles;
 using AutoMapper;
-using Ioc.MapperProfiles;
 using Microsoft.Extensions.DependencyInjection;
 
 #endregion
 
-namespace Ioc.Dependencies
+namespace Api.Dependencies
 {
     public static class AutoMapper
     {

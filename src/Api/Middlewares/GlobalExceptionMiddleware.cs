@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 #endregion
 
-namespace Ioc.Middlewares
+namespace Api.Middlewares
 {
     public class GlobalExceptionMiddleware : IMiddleware
     {

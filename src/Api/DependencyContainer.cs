@@ -1,15 +1,15 @@
 ﻿#region
 
-using Ioc.Dependencies;
+using Api.Dependencies;
+using Api.Services;
+using Api.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Repository;
 using Repository.Interfaces;
-using Service;
-using Service.Interfaces;
 
 #endregion
 
-namespace Ioc
+namespace Api
 {
     public static class DependencyContainer
     {

@@ -7,13 +7,6 @@ pipelines:
         caches:
           - dotnetcore
         script:
-          - dotnet restore
-          - dotnet build --no-restore
-    - step:
-        name: Build verification solution
-        caches:
-          - dotnetcore
-        script:
-          - yes | cp -rf test/Verification.Tests/BestBlogs.sln . # copy and override the solution file to include verification tests
-          - dotnet restore
-          - dotnet build --no-restore
+          - cp -rf ./src ./src
+          - dotnet restore ./src/Api/Api.csproj
+          - dotnet build ./src/Api/Api.csproj --no-restore

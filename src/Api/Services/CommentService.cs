@@ -3,17 +3,17 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Api.Services.Interfaces;
 using AutoMapper;
 using Model.Dtos;
 using Model.Entities;
 using Model.Exceptions;
 using Model.ViewModels;
 using Repository.Interfaces;
-using Service.Interfaces;
 
 #endregion
 
-namespace Service
+namespace Api.Services
 {
     public class CommentService : ICommentService
     {

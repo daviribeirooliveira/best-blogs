@@ -2,13 +2,13 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Api.Controllers;
+using Api.Services.Interfaces;
 using Api.Tests.Fixtures;
 using Microsoft.AspNetCore.Mvc;
 using Model.Dtos;
 using Model.Entities;
 using Model.ViewModels;
 using Moq;
-using Service.Interfaces;
 using Xunit;
 
 namespace Api.Tests
@@ -63,7 +63,7 @@ namespace Api.Tests
         public async Task Post_Creates_And_Returns_Created_Comment()
         {
             // Arrange
-            var mapper = Ioc.Dependencies.AutoMapper.MapperConfigurationBuilder().CreateMapper();
+            var mapper = Dependencies.AutoMapper.MapperConfigurationBuilder().CreateMapper();
 
             var commentServiceMock = new Mock<ICommentService>();
 

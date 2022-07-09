@@ -2,7 +2,7 @@
 using Model.Dtos;
 using Model.Entities;
 
-namespace Ioc.MapperProfiles
+namespace Api.MapperProfiles
 {
     public class DtosProfiles : Profile
     {

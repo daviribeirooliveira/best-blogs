@@ -8,7 +8,7 @@ using Model.ViewModels;
 
 #endregion
 
-namespace Service.Interfaces
+namespace Api.Services.Interfaces
 {
     public interface ICommentService
     {

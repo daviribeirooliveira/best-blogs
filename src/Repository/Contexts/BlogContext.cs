@@ -1,11 +1,11 @@
 #region
 
-using Microsoft.EntityFrameworkCore;
-using Model.Entities;
-using Repository.TypeConfigurations;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Model.Entities;
+using Repository.TypeConfigurations;
 
 #endregion
 
